@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arcadehub.arcade_hub.sign_up_controller">
+   <ImageView fitHeight="500.0" fitWidth="802.0" layoutX="-1.0">
+      <Image url="@../arcade_hub_imgs/signup.png" />
+   </ImageView>
+   <AnchorPane layoutX="160.0" layoutY="55.0" prefHeight="388.0" prefWidth="408.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-background-color: linear-gradient(to bottom, #ffffff, transparent, rgba(0,0,0,0.5) 80%);">
+      <Label alignment="CENTER" layoutX="75.0" layoutY="10.0" prefHeight="60.0" prefWidth="251.0" text="Create Account" underline="true">
+         <font>
+            <Font name="Bauhaus 93" size="34.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3684210479259491" green="0.020467836409807205" blue="0.3394249379634857" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.23939956724643707" green="0.13456383347511292" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="usernametext" layoutX="87.0" layoutY="100.0" prefHeight="48.0" prefWidth="293.0" promptText="username" style="-fx-background-radius: 10px;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="createButton" alignment="CENTER" layoutX="87.0" layoutY="288.0" mnemonicParsing="false" onAction="#getText" onMouseEntered="#onCreateButtonEntered" onMouseExited="#onCreateButtonExited" prefHeight="48.0" prefWidth="293.0" style="-fx-background-color: linear-gradient(to right, #00cc00, #00ff00); -fx-background-radius: 10px;" text="Create Now">
+         <font>
+            <Font name="Gadugi Bold" size="21.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.82" topOpacity="0.22" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="22.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../arcade_hub_imgs/User.png" />
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="22.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../arcade_hub_imgs/createpass.png" />
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="22.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../arcade_hub_imgs/confirmpass.png" />
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../arcade_hub_imgs/create.png" />
+      </ImageView>
+      <PasswordField fx:id="cretepasstext" layoutX="87.0" layoutY="159.0" prefHeight="48.0" prefWidth="293.0" promptText="create password" style="-fx-background-radius: 10px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="confirmpasstext" layoutX="87.0" layoutY="220.0" prefHeight="48.0" prefWidth="293.0" promptText="confirm password" style="-fx-background-radius: 10px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </PasswordField>
+   </AnchorPane>
+   <Label fx:id="callLogin" layoutX="15.0" layoutY="460.0" onMouseClicked="#setCallLogin" onMouseEntered="#oncallLoginEntered" onMouseExited="#oncallLoginExited" prefHeight="30.0" prefWidth="236.0" text="Already an user? Login Instead" textFill="WHITE">
+      <font>
+         <Font name="Gadugi" size="17.0" />
+      </font>
+   </Label>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.arcadehub.arcade_hub.sps_controller">
+   <ImageView fitHeight="500.0" fitWidth="800.0">
+      <Image url="@../arcade_hub_imgs/RPS-menu.png"/>
+   </ImageView>
+   <ImageView fx:id="go_back" fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#call_back"
+              pickOnBounds="true" preserveRatio="true">
+      <Image url="@../arcade_hub_imgs/goback.png"/>
+   </ImageView>
+   <ImageView fx:id="singleMode" fitHeight="57.59" fitWidth="200.0" layoutX="35.0" layoutY="411.0" onMouseClicked="#call_single" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../arcade_hub_imgs/singleButton.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="multiMode" fitHeight="50.98" fitWidth="185.0" layoutX="307.0" layoutY="415.0" onMouseClicked="#call_multi" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../arcade_hub_imgs/multiButton.png" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="historyMode" fitHeight="50.98" fitWidth="185.0" layoutX="569.0" layoutY="415.0" onMouseClicked="#call_history" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../arcade_hub_imgs/gameHistory.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

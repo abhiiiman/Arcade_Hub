@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.arcadehub.arcade_hub.menu_controller">
+   <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../arcade_hub_imgs/menu.png"/>
+   </ImageView>
+   <Label fx:id="username" layoutX="700.0" layoutY="62.0" text="UserName">
+      <font>
+         <Font name="Ebrima Bold" size="18.0"/>
+      </font>
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color green="1.0" blue="0.8952381014823914"/>
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" blue="0.9333333373069763"/>
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
+   <AnchorPane fx:id="frame1" layoutX="32.0" layoutY="100.0" prefHeight="250.0" prefWidth="230.0"
+               style="-fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)); -fx-background-radius: 10px;">
+      <ImageView fx:id="frameimage1" fitHeight="243.0" fitWidth="226.0" layoutX="-1.0" layoutY="13.0"
+                 pickOnBounds="true" preserveRatio="true" onMouseClicked="#call_snake">
+         <effect>
+            <Reflection/>
+         </effect>
+         <Image url="@../arcade_hub_imgs/snake.png"/>
+      </ImageView>
+   </AnchorPane>
+   <AnchorPane fx:id="frame2" layoutX="278.0" layoutY="100.0" prefHeight="250.0" prefWidth="230.0"
+               style="-fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)); -fx-background-radius: 10px;">
+      <ImageView fx:id="frameimage2" fitHeight="251.0" fitWidth="228.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true"
+                 preserveRatio="true" onMouseClicked="#call_tictactoe">
+         <effect>
+            <Reflection/>
+         </effect>
+         <Image url="@../arcade_hub_imgs/TTT.png"/>
+      </ImageView>
+   </AnchorPane>
+   <AnchorPane fx:id="frame3" layoutX="522.0" layoutY="100.0" prefHeight="250.0" prefWidth="230.0"
+               style="-fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)); -fx-background-radius: 10px;">
+      <ImageView fx:id="frameimage3" fitHeight="234.0" fitWidth="244.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true"
+                 preserveRatio="true" onMouseClicked="#call_sps">
+         <effect>
+            <Reflection/>
+         </effect>
+         <Image url="@../arcade_hub_imgs/SPS.png"/>
+      </ImageView>
+   </AnchorPane>
+   <ImageView fx:id="logout" fitHeight="42.0" fitWidth="50.0" layoutX="23.0" layoutY="22.0" pickOnBounds="true"
+              preserveRatio="true" onMouseClicked="#logOut">
+      <Image url="@../arcade_hub_imgs/Logout.png"/>
+   </ImageView>
+   <ImageView fitHeight="51.0" fitWidth="354.0" layoutX="225.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../arcade_hub_imgs/arcadehub.png"/>
+   </ImageView>
+   <ImageView fx:id="avatar" fitHeight="55.0" fitWidth="55.0" layoutX="740.0" layoutY="6.0" pickOnBounds="true"
+              preserveRatio="true">
+      <image>
+         <Image url="@../arcade_hub_imgs/faceavatar.png"/>
+      </image>
+   </ImageView>
+</AnchorPane>
