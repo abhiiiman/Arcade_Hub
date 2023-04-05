@@ -108,10 +108,6 @@ public class snake_controller {
 
     public void call_single(MouseEvent event) {
         System.out.println("single Mode is called !");
-//        creating the object to start the game app here.
-        snakeGame = new SnakeApp();
-        javafx.application.Application.launch(SnakeApp.class);
-
     }
 
     public void call_multi(MouseEvent event) {
